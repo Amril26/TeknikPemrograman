@@ -1,7 +1,7 @@
 import time
 
 A = [1, 3, 2, 5, 4]
-
+start = time.time()
 for i in range(len(A)):
 	
 	min_idx = i
@@ -12,10 +12,6 @@ for i in range(len(A)):
 	cont = A[i]
 	A[i] = A[min_idx]
 	A[min_idx] = cont
-
-print ("Sorted array")
-for i in range(len(A)):
-	print("keluar angka %d" %A[i]),
-
-start_time = time.process_time()
-print(start_time)
+	print("#%i - %s" %(i,A))
+end =time.time()
+print ("Selesai %f detik" % (end - start) )
